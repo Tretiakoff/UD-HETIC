@@ -5,7 +5,7 @@ $container = $app->getContainer();
 $container['view'] = function ($container) {
     $dir = dirname(__DIR__);
     $view = new \Slim\Views\Twig($dir . '/app/views', [
-        'cache' => $dir . '/tmp/cache'
+        'cache' =>  false
     ]);
 
     // Instantiate and add Slim specific extension
@@ -13,4 +13,11 @@ $container['view'] = function ($container) {
     $view->addExtension(new Slim\Views\TwigExtension($container['router'], $basePath));
 
     return $view;
+};
+
+$container['pdo'] = function () {
+    $pdo =new PDO('mysql:host=localhost;dbname=ud','root','root');
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+    return $pdo;
 };

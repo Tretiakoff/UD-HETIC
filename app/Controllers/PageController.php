@@ -4,19 +4,32 @@ namespace App\Controllers;
 
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
+use App\Model\Database;
 
-class PageController {
+class PageController extends Controller {
 
-    private $container;
+    public function home(RequestInterface $request, ResponseInterface $response) {
 
-    public function __construct($container)
-    {
-        $this->container = $container;
+        $this->render($response, 'pages/home.twig');
     }
 
-    public function home(RequestInterface $request, ResponseInterface $response ) {
+    public function getContact(RequestInterface $request, ResponseInterface $response) {
 
-        $this->container->view->render($response, 'pages/home.twig');
+        $this->render($response, 'pages/contact.twig');
     }
 
+    public function postContact(RequestInterface $request, ResponseInterface $response) {
+
+        $lastName = $request->getParam('lastName');
+        $firstName = $request->getParam('firstName');
+        $email = $request->getParam('email');
+        $message = $request->getParam('message');
+
+        $model = new Database($this->container->pdo);
+        $model->setContact($lastName, $firstName, $email, $message);
+
+        return ([
+            'data' => 'success'
+        ]);
+    }
 }
