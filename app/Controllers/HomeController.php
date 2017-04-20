@@ -6,7 +6,7 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
 use App\Model\Database;
 
-class PageController extends Controller {
+class HomeController extends Controller {
 
     public function home(RequestInterface $request, ResponseInterface $response) {
 
