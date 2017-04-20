@@ -10,12 +10,12 @@ class PageController extends Controller {
 
     public function home(RequestInterface $request, ResponseInterface $response) {
 
-        $this->render($response, 'pages/home.twig');
+        $this->render($response, 'pages/home.html.twig');
     }
 
     public function getContact(RequestInterface $request, ResponseInterface $response) {
 
-        $this->render($response, 'pages/contact.twig');
+        $this->render($response, 'pages/contact.html.twig');
     }
 
     public function postContact(RequestInterface $request, ResponseInterface $response) {
@@ -35,28 +35,28 @@ class PageController extends Controller {
 
     public function banner(RequestInterface $request, ResponseInterface $response) {
 
-        $this->render($response, 'pages/banner.twig');
+        $this->render($response, 'pages/banner.html.twig');
     }
     public function firstNumbers(RequestInterface $request, ResponseInterface $response) {
 
-        $this->render($response, 'pages/first-numbers.twig');
+        $this->render($response, 'pages/first-numbers.html.twig');
     }
 
     public function expertise(RequestInterface $request, ResponseInterface $response) {
 
-        $this->render($response, 'pages/expertise.twig');
+        $this->render($response, 'pages/expertise.html.twig');
     }
 
     public function secondNumbers(RequestInterface $request, ResponseInterface $response) {
 
-        $this->render($response, 'pages/second-numbers.twig');
+        $this->render($response, 'pages/second-numbers.html.twig');
     }
     public function team(RequestInterface $request, ResponseInterface $response) {
 
-        $this->render($response, 'pages/team.twig');
+        $this->render($response, 'pages/team.html.twig');
     }
     public function partners(RequestInterface $request, ResponseInterface $response) {
 
-        $this->render($response, 'pages/partners.twig');
+        $this->render($response, 'pages/partners.html.twig');
     }
 }
