@@ -1,5 +1,93 @@
 {% block content %}
+    <section class="parteners container-fluid">
+        <div class="row parteners__right">
+            <div class="col-md-12 parteners__right--txt">
+                <h2>Hac ex conlaticia stipe Valerius humatur ille Publicola et subsidiis</h2>
+                <p>Hac ex causa conlaticia stipe Valerius humatur ille Publicola et subsidiis amicorum mariti inops cum
+                    liberis uxor</p>
+            </div>
+        </div>
+        <div class="container parteners__carousel">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1 bg-white">
+                    <div class="carousel slide" data-ride="carousel" data-type="multi" id="myCarousel2">
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <div class=" border col-md-2 col-sm-6 col-xs-12">
+                                    <a href="#">
+                                        <img src="{{ base_url() }}/assets/img/logo1.png" class="img-responsive">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class=" border col-md-2 col-sm-6 col-xs-12">
+                                    <a href="#">
+                                        <img src="{{ base_url() }}/assets/img/logo2.png" class="img-responsive">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class=" border col-md-2 col-sm-6 col-xs-12">
+                                    <a href="#">
+                                        <img src="{{ base_url() }}/assets/img/logo3.png" class="img-responsive">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class=" border col-md-2 col-sm-6 col-xs-12">
+                                    <a href="#">
+                                        <img src="{{ base_url() }}/assets/img/logo4.png" class="img-responsive">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class=" border col-md-2 col-sm-6 col-xs-12">
+                                    <a href="#">
+                                        <img src="{{ base_url() }}/assets/img/logo1.png" class="img-responsive">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class=" border col-md-2 col-sm-6 col-xs-12">
+                                    <a href="#">
+                                        <img src="{{ base_url() }}/assets/img/logo3.png" class="img-responsive">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
 
-    <h2 class="yellow">ICI NOS PARTENAIRES</h2>
+                        <div class="cercle_yellow">
+                            <a class="left carousel-control" href="#myCarousel2" data-slide="prev">
+                                <i class="glyphicon glyphicon-chevron-left"></i>
+                            </a>
+                            <p class="txt">1/3</p>
+                            <a class="right carousel-control" href="#myCarousel2" data-slide="next">
+                                <i class="glyphicon glyphicon-chevron-right"></i>
+                            </a>
+                        </div>
 
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <script>
+        $('.carousel[data-type="multi"] .item').each(function () {
+            var next = $(this).next();
+            if (!next.length) {
+                next = $(this).siblings(':first');
+            }
+            next.children(':first-child').clone().appendTo($(this));
+
+            for (var i = 0; i < 1; i++) {
+                next = next.next();
+                if (!next.length) {
+                    next = $(this).siblings(':first');
+                }
+                next.children(':first-child').clone().appendTo($(this));
+            }
+        });
+    </script>
 {% endblock %}
