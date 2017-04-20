@@ -1,5 +1,91 @@
 {% block content %}
 
-    <h2>ICI L'EQUIPE</h2>
 
+    <section class="team">
+        <div class="row team__right">
+            <div class="col-md-12 team__right--txt">
+                <p>Lorem ipsum dolor sit amet,</p>
+                <h2>On vous <br> accompagne</h2>
+            </div>
+        </div>
+
+        <div class="container-fluid team__carousel">
+
+            <div class="row">
+
+
+                <div class="col-md-12 bg-white">
+                    <div class="carousel slide" data-ride="carousel" data-type="multi" id="myCarousel1">
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <div class=" border col-md-2 col-sm-6 col-xs-12">
+                                    <a href="#">
+                                        <img src="{{ base_url() }}/assets/img/pers1.png" class="img-responsive">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class=" border col-md-2 col-sm-6 col-xs-12">
+                                    <a href="#">
+                                        <img src="{{ base_url() }}/assets/img/pers2.png" class="img-responsive">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class=" border col-md-2 col-sm-6 col-xs-12">
+                                    <a href="#">
+                                        <img src="{{ base_url() }}/assets/img/pers3.png" class="img-responsive">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class=" border col-md-2 col-sm-6 col-xs-12">
+                                    <a href="#">
+                                        <img src="{{ base_url() }}/assets/img/pers4.png" class="img-responsive">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class=" border col-md-2 col-sm-6 col-xs-12">
+                                    <a href="#">
+                                        <img src="{{ base_url() }}/assets/img/pers5.png" class="img-responsive">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cercle_yellow">
+                            <a class="left carousel-control" href="#myCarousel1" data-slide="prev">
+                                <i class="glyphicon glyphicon-chevron-left"></i>
+                            </a>
+                            <p class="txt">1/6</p>
+                            <a class="right carousel-control" href="#myCarousel1" data-slide="next">
+                                <i class="glyphicon glyphicon-chevron-right"></i>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <script>
+        $('.carousel[data-type="multi"] .item').each(function () {
+            var next = $(this).next();
+            if (!next.length) {
+                next = $(this).siblings(':first');
+            }
+            next.children(':first-child').clone().appendTo($(this));
+
+            for (var i = 0; i < 1; i++) {
+                next = next.next();
+                if (!next.length) {
+                    next = $(this).siblings(':first');
+                }
+                next.children(':first-child').clone().appendTo($(this));
+            }
+        });
+    </script>
 {% endblock %}
