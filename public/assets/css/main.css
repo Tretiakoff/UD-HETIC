@@ -22,11 +22,20 @@
 	background-color: white;
 }*/
 
-.header .navbar-brand img {
-    margin-top: -3px;
-    margin-left: 15px;
+
+.header .navbar-right li a
+{
+	color : #082167;
+    font-family: 'Raleway', sans-serif;
+	margin-top: 15px;
 }
 
+.header .navbar-brand img
+{
+	margin-top: -3px;
+	margin-left: 15px;
+
+}
 .header .navbar-default {
     background-color: #fff;
     border-color: rgba(0, 0, 0, 0);
@@ -52,7 +61,6 @@
         border-color: rgba(0, 0, 0, 0);
     }
 }
-
 .banner {
     background-image: url(../img/banner.png);
     padding-bottom: 240px;
@@ -63,8 +71,19 @@
 
 .banner h1 {
     font-size: 30px;
+
 }
 
-.banner p {
-    font-size: 20px;
+.banner{
+	background-image: url(../img/banner.png);
+	padding-bottom: 240px;
+	padding-top: 180px;
+font-family: 'Raleway', sans-serif;
+color: #FFF;
+}
+.banner h1{
+	font-size: 30px;
+}
+.banner p{
+	font-size: 20px;
 }
