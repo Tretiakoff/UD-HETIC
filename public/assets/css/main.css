@@ -5,3 +5,59 @@
 .red {
     color: red;
 }
+
+.header nav .navbar-header
+{
+	padding-top: 10px;
+	background-color: white;
+}
+
+.header .navbar-right li a
+{
+	color : #082167;
+	font-family: 'Raleway' bold;
+	margin-top: 15px;
+}
+
+.header .navbar-brand img
+{
+	margin-top: -3px;
+	margin-left: 15px;
+
+}
+.header .navbar-default {
+    background-color: #fff;
+    border-color: rgba(0,0,0,0);
+}
+
+@media screen and (max-width: 768px){
+.header .navbar-right li a{
+	text-align: center;
+	color : #082167;
+	font-family: 'Raleway' bold;
+}
+.header .navbar-default .navbar-toggle {
+    border: 0px;
+}
+.header .navbar-default .navbar-toggle:hover {
+    background-color: rgba(0,0,0,0);
+}
+.header .navbar-default {
+    background-color: #fff;
+    border-color: rgba(0,0,0,0);
+}
+}
+
+.banner{
+	background-image: url(../img/banner.png);
+	padding-bottom: 240px;
+	padding-top: 180px;
+	font-family: 'Raleway', sans-serif;
+	color: #FFF;
+}
+.banner h1{
+	font-size: 30px;
+}
+.banner p{
+	font-size: 20px;
+}
