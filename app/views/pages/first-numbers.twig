@@ -3,13 +3,36 @@
 <section class="first-number">
   	<div class="container">
     	<div class="col-md-ofset-3 col-md-3">
-      		<h1>2012</h1>
+      		<h1 id="h1"></h1>
       		<p>Date de creation</p>
   		</div>
     <div class="col-md-3">
-      	<h1>149</h1>
+      	<h1 id="h2"></h1>
       	<p>Chantiers réalisés</p>
   	</div>
+  	<script type="text/javascript">
+
+      var end_year = 2012;
+      var end_chantier = 149;
+      var debut_year = 0;
+      var debut_chantier = 0;
+
+      var j = setInterval(function()
+      {
+          if (debut_year < end_year)
+          {
+              debut_year+=4;
+              document.getElementById('h1').innerText = debut_year;
+          }
+
+          if (debut_chantier < end_chantier)
+          {
+          	debut_chantier+=1;
+          	document.getElementById('h2').innerText = debut_chantier;
+          }
+      }, 0);
+
+      </script>
 </section>
 
 {% endblock %}
