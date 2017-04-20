@@ -5,3 +5,51 @@
 .red {
     color: red;
 }
+
+.header nav .navbar-header
+{
+	padding-top: 10px;
+	background-color: white;
+}
+
+/*.header nav .navbar-collapse
+{
+	background-color: white;
+}*/
+
+.header .navbar-right li a
+{
+	color : #082167;
+	margin-top: 15px;
+}
+
+.header .navbar-brand img
+{
+	margin-top: -20px;
+	margin-left: 15px;
+
+}
+.header .navbar-default {
+    background-color: #fff;
+    border-color: rgba(0,0,0,0);
+}
+
+@media screen and (max-width: 768px){
+.header nav .navbar-collapse
+{
+	background-color: !important;
+}
+.header .navbar-right li a{
+	text-align: center;
+}
+.header .navbar-default .navbar-toggle {
+    border: 0px;
+}
+.header .navbar-default .navbar-toggle:hover {
+    background-color: rgba(0,0,0,0);
+}
+.header .navbar-default {
+    background-color: #fff;
+    border-color: rgba(0,0,0,0);
+}
+}
