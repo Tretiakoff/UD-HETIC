@@ -15,7 +15,8 @@
 .header .navbar-right li a
 {
 	color : #082167;
-	font-family: 'Raleway' bold;
+	font-family: 'Raleway',sans-serif;
+	font-weight: bold;
 	margin-top: 15px;
 }
 
@@ -34,7 +35,8 @@
 .header .navbar-right li a{
 	text-align: center;
 	color : #082167;
-	font-family: 'Raleway' bold;
+	font-family: 'Raleway',sans-serif;
+	font-weight: bold;
 }
 .header .navbar-default .navbar-toggle {
     border: 0px;
@@ -61,3 +63,99 @@
 .banner p{
 	font-size: 20px;
 }
+
+
+
+
+
+
+
+/* latin-ext */
+@font-face {
+	font-family: 'Raleway';
+	font-style: normal;
+	font-weight: 400;
+	src: local("Raleway"), local("Raleway-Regular"), url(https://fonts.gstatic.com/s/raleway/v11/YZaO6llzOP57DpTBv2GnyFKPGs1ZzpMvnHX-7fPOuAc.woff2) format("woff2");
+	unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF; }
+body {
+	box-sizing: border-box !important; }
+
+.row {
+	margin-right: -11px;
+	margin-left: -11px; }
+
+.overfflow {
+	overflow: hidden; }
+
+.brick {
+	background-image: url(../img/bg.png);
+	margin-top: 55px;
+	padding-top: 100px;
+	padding-bottom: 280px;
+	position: relative; }
+.brick h2 {
+	font-family: 'Raleway', sans-serif;
+	font-size: 30px;
+	font-weight: bold;
+	color: #082167; }
+.brick p {
+	font-family: 'Raleway', sans-serif;
+	font-size: 20px;
+	color: #082167; }
+.brick .col-lg-1, .brick .col-lg-10, .brick .col-lg-11, .brick .col-lg-12, .brick .col-lg-2, .brick .col-lg-3, .brick .col-lg-4, .brick .col-lg-5, .brick .col-lg-6, .brick .col-lg-7, .brick .col-lg-8, .brick .col-lg-9, .brick .col-md-1, .brick .col-md-10, .brick .col-md-11, .brick .col-md-12, .brick .col-md-2, .brick .col-md-3, .brick .col-md-4, .brick .col-md-5, .brick .col-md-6, .brick .col-md-7, .brick .col-md-8, .brick .col-md-9, .brick .col-sm-1, .brick .col-sm-10, .brick .col-sm-11, .brick .col-sm-12, .brick .col-sm-2, .brick .col-sm-3, .brick .col-sm-4, .brick .col-sm-5, .brick .col-sm-6, .brick .col-sm-7, .brick .col-sm-8, .brick .col-sm-9, .brick .col-xs-1, .brick .col-xs-10, .brick .col-xs-11, .brick .col-xs-12, .brick .col-xs-2, .brick .col-xs-3, .brick .col-xs-4, .brick .col-xs-5, .brick .col-xs-6, .brick .col-xs-7, .brick .col-xs-8, .brick .col-xs-9 {
+	position: relative;
+	min-height: 1px;
+	padding-right: 11px;
+	padding-left: 11px; }
+.brick .brick__info {
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+	background-color: #f9d849;
+	width: 635px;
+	height: 635px;
+	position: absolute;
+	top: -180px;
+	right: -130px; }
+.brick .brick__info .brick__info--right {
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	padding: 120px 220px 140px 20px; }
+.brick img {
+	width: 100%; }
+.brick .item1 img {
+	max-height: 360px; }
+.brick .item2 img {
+	max-height: 180px; }
+.brick .item3 img {
+	max-height: 380px; }
+.brick .item4 img {
+	max-height: 542px; }
+.brick .item1, .brick .item2, .brick .item3 {
+	margin-top: 22px; }
+.brick .item4 {
+	margin-top: 214px; }
+.brick .brick__middle .item2 img {
+	max-height: 172px; }
+
+@media (min-width: 768px) and (max-width: 1200px) {
+	.brick .brick__middle .item2 img {
+		max-height: 139px; }
+
+	.brick .item4 {
+		margin-top: 169px; } }
+@media (max-width: 767px) {
+	.brick {
+		padding-bottom: 80px; }
+
+	.brick .container {
+		margin-top: -100px; }
+
+	.brick .item4 {
+		margin-top: 22px; } }
+
