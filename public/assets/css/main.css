@@ -800,7 +800,7 @@ body {
 
 .moyen{
 	padding: 375px 110px 0px 250px;
-	width: 475px;
+	
 }
 .grand{
 	padding: 275px 110px 0px 180px;
@@ -811,6 +811,9 @@ body {
 	position: absolute;
 	bottom: 20px;
 	right: 20px;
+	font-size: 14px !important;
+	font-weight: 800 !important;
+	margin: 0;
 
 }
 .divNumTel, .divHoraire, .submit, .divNom, .divEmail{
@@ -824,8 +827,9 @@ body {
 label, input{
 	display: block;
 }
-h2{
-	font-family: 'Raleway:800', sans-serif;
+.flecheMessage, .flecheTel{
+	font-size: 20px;
+	font-weight: 800;
 	margin: 0;
 }
 p{
