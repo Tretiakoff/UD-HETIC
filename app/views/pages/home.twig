@@ -1,6 +1,26 @@
-{% extends 'base.html.twig'%}
+{% extends 'base.html.twig' %}
 
 {% block content %}
-<h2>ON HOME</h2>
+
+    <div class="banner-container">
+        {{ include('/pages/banner.twig') }}
+    </div>
+    <div class="first-numbers-container">
+        {{ include('/pages/first-numbers.twig') }}
+    </div>
+    <div class="expertise-container">
+        {{ include('/pages/expertise.twig') }}
+    </div>
+    <div class="second-numbers-container">
+        {{ include('/pages/second-numbers.twig') }}
+    </div>
+    <div class="team-container">
+        {{ include('/pages/team.twig') }}
+    </div>
+    <div class="partners-container">
+        {{ include('/pages/partners.twig') }}
+    </div>
+
 {% endblock %}
+
 

@@ -32,4 +32,31 @@ class PageController extends Controller {
             'data' => 'success'
         ]);
     }
+
+    public function banner(RequestInterface $request, ResponseInterface $response) {
+
+        $this->render($response, 'pages/banner.twig');
+    }
+    public function firstNumbers(RequestInterface $request, ResponseInterface $response) {
+
+        $this->render($response, 'pages/first-numbers.twig');
+    }
+
+    public function expertise(RequestInterface $request, ResponseInterface $response) {
+
+        $this->render($response, 'pages/expertise.twig');
+    }
+
+    public function secondNumbers(RequestInterface $request, ResponseInterface $response) {
+
+        $this->render($response, 'pages/second-numbers.twig');
+    }
+    public function team(RequestInterface $request, ResponseInterface $response) {
+
+        $this->render($response, 'pages/team.twig');
+    }
+    public function partners(RequestInterface $request, ResponseInterface $response) {
+
+        $this->render($response, 'pages/partners.twig');
+    }
 }
