@@ -10,53 +10,33 @@ class HomeController extends Controller {
 
     public function home(RequestInterface $request, ResponseInterface $response) {
 
-        $this->render($response, 'pages/home.html.twig');
-    }
-
-    public function getContact(RequestInterface $request, ResponseInterface $response) {
-
-        $this->render($response, 'pages/contact.html.twig');
-    }
-
-    public function postContact(RequestInterface $request, ResponseInterface $response) {
-
-        $lastName = $request->getParam('lastName');
-        $firstName = $request->getParam('firstName');
-        $email = $request->getParam('email');
-        $message = $request->getParam('message');
-
-        $model = new Database($this->container->pdo);
-        $model->setContact($lastName, $firstName, $email, $message);
-
-        return ([
-            'data' => 'success'
-        ]);
+        $this->render($response, 'home.html.twig');
     }
 
     public function banner(RequestInterface $request, ResponseInterface $response) {
 
-        $this->render($response, 'pages/banner.html.twig');
+        $this->render($response, 'section/banner.html.twig');
     }
     public function firstNumbers(RequestInterface $request, ResponseInterface $response) {
 
-        $this->render($response, 'pages/first-numbers.html.twig');
+        $this->render($response, 'section/first-numbers.html.twig');
     }
 
     public function expertise(RequestInterface $request, ResponseInterface $response) {
 
-        $this->render($response, 'pages/expertise.html.twig');
+        $this->render($response, 'section/expertise.html.twig');
     }
 
     public function secondNumbers(RequestInterface $request, ResponseInterface $response) {
 
-        $this->render($response, 'pages/second-numbers.html.twig');
+        $this->render($response, 'section/second-numbers.html.twig');
     }
     public function team(RequestInterface $request, ResponseInterface $response) {
 
-        $this->render($response, 'pages/team.html.twig');
+        $this->render($response, 'section/team.html.twig');
     }
     public function partners(RequestInterface $request, ResponseInterface $response) {
 
-        $this->render($response, 'pages/partners.html.twig');
+        $this->render($response, 'section/partners.html.twig');
     }
 }

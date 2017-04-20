@@ -27,4 +27,44 @@ class Database
             "data" => 'success'
         ]);
     }
+
+    public function setCall ($interval, $number) {
+        $req = $this->pdo->prepare(
+            ('INSERT INTO phone_call (time_slot, phone) VALUES ( :interval, :number)')
+        );
+        $req->execute([
+            "interval" => $interval,
+            "number" => $number,
+        ]);
+
+        return ([
+            "data" => 'success'
+        ]);
+    }
+
+    public function getContact () {
+        $req = $this->pdo->prepare(
+            ('SELECT * FROM contact')
+        );
+        $req->execute();
+
+        $calls = $req->fetchAll();
+
+        return ([
+            "data" => $calls
+        ]);
+    }
+
+    public function getCall () {
+        $req = $this->pdo->prepare(
+            ('SELECT * FROM phone_call')
+        );
+        $req->execute();
+
+        $calls = $req->fetchAll();
+
+        return ([
+            "data" => $calls
+        ]);
+    }
 }
