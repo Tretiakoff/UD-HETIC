@@ -12,6 +12,8 @@ $(".introTel").click(function() {
     $(".flecheMessage").addClass("arrow_carrot-right");
     $(".flecheTel").toggleClass("arrow_carrot-down");
     $(".flecheTel").toggleClass("arrow_carrot-right");
+    $(".stickyGlobal").removeClass("bgGrand");
+    $(".moyen").removeClass("grand");
 });
 
 $(".introMessage").click(function() {
