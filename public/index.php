@@ -9,15 +9,19 @@ $app = new \Slim\App([
 ]);
 
 require '../app/container.php';
+///HOMEVIEWS
+$app->get('/', \App\Controllers\HomeController::class. ':home');
+$app->get('/banner', \App\Controllers\HomeController::class. ':bannner');
+$app->get('/first-numbers', \App\Controllers\HomeController::class. ':firstNumbers');
+$app->get('/expertise', \App\Controllers\HomeController::class. ':expertise');
+$app->get('/second-numbers', \App\Controllers\HomeController::class. ':secondNumbers');
+$app->get('/team', \App\Controllers\HomeController::class. ':team');
+$app->get('/partners', \App\Controllers\HomeController::class. ':partners');
 
-$app->get('/', \App\Controllers\PageController::class. ':home');
-$app->get('/banner', \App\Controllers\PageController::class. ':bannner');
-$app->get('/first-numbers', \App\Controllers\PageController::class. ':firstNumbers');
-$app->get('/expertise', \App\Controllers\PageController::class. ':expertise');
-$app->get('/second-numbers', \App\Controllers\PageController::class. ':secondNumbers');
-$app->get('/team', \App\Controllers\PageController::class. ':team');
-$app->get('/partners', \App\Controllers\PageController::class. ':partners');
-$app->get('/contact', \App\Controllers\PageController::class. ':getContact')->setName('contact');
-$app->post('/contact', \App\Controllers\PageController::class. ':postContact');
+//FORMS
+$app->get('/contact', \App\Controllers\DataController::class. ':getContact')->setName('contact');
+$app->post('/contact', \App\Controllers\DataController::class. ':postContact');
+$app->get('/call', \App\Controllers\DataController::class. ':getCall')->setName('call');
+$app->post('/call', \App\Controllers\DataController::class. ':postCall');
 
 $app->run();

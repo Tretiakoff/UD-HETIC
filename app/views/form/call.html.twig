@@ -1,0 +1,7 @@
+{% block content %}
+    <form action="{{ path_for('call') }}" method="post">
+        <input type="text" placeholder="interval" id="interval" name="interval">
+        <input type="text" placeholder="number" id="number" name="number">
+        <input type="submit" value="Envoyer">
+    </form>
+{% endblock %}

@@ -1,0 +1,10 @@
+{% block content %}
+    <form action="{{ path_for('contact') }}" method="post">
+        <input type="text" placeholder="Nom" id="lastName" name="lastName">
+        <input type="text" placeholder="Prénom" id="firstName" name="firstName">
+        <input type="email" placeholder="Email" id="email" name="email">
+        <label for="message">Votre Message</label>
+        <textarea name="message" id="message" cols="30" rows="10"></textarea>
+        <input type="submit" value="Envoyer">
+    </form>
+{% endblock %}
