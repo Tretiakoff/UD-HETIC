@@ -15,6 +15,8 @@ class DataController extends Controller {
 
     public function postContact(RequestInterface $request, ResponseInterface $response) {
 
+
+
         $lastName = $request->getParam('lastName');
         $firstName = $request->getParam('firstName');
         $email = $request->getParam('email');
@@ -34,10 +36,8 @@ class DataController extends Controller {
     }
 
     public function postCall(RequestInterface $request, ResponseInterface $response) {
-
         $interval = $request->getParam('interval');
         $number = $request->getParam('number');
-
         $model = new Database($this->container->pdo);
         $model->setCall($interval, $number);
 

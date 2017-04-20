@@ -21,7 +21,7 @@ $app->get('/partners', \App\Controllers\HomeController::class. ':partners');
 //FORMS
 $app->get('/contact', \App\Controllers\DataController::class. ':getContact')->setName('contact');
 $app->post('/contact', \App\Controllers\DataController::class. ':postContact');
-$app->get('/call', \App\Controllers\DataController::class. ':getCall')->setName('call');
-$app->post('/call', \App\Controllers\DataController::class. ':postCall');
+$app->get('/call', \App\Controllers\DataController::class. ':getCall');
+$app->post('/post-call', \App\Controllers\DataController::class. ':postCall')->setName('call');
 
 $app->run();

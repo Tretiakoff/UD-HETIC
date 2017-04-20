@@ -1,7 +1,27 @@
 {% block content %}
-    <form action="{{ path_for('call') }}" method="post">
-        <input type="text" placeholder="interval" id="interval" name="interval">
-        <input type="text" placeholder="number" id="number" name="number">
-        <input type="submit" value="Envoyer">
-    </form>
+    <div class="telGlobal">
+        <div class="introTel">
+            <h2>Vous souhaitez être rappelé</h2>
+            <p>Laissez nous votre numéro et un horaire <p>
+        </div>
+        <form class="telephoneForm displayNone"
+              name="telephoneForm" action="{{ path_for('call') }}" method="post" id="call">
+            <div class="divNumTel">
+                <label for="telephone">Téléphone</label>
+                <input type="tel" class="telephone"  id="number" name="number" placeholder="Numéro de téléphone"/>
+            </div>
+            <div class="divHoraire">
+                <label for="plageHoraire">Plage horaire</label>
+                <select class="plageHoraire" id="interval" name="interval">
+                    <option value="9h">Entre 9h-11h</option>
+                    <option value="9h">Entre 11h-13h</option>
+                    <option value="9h">Entre 13h-15h</option>
+                    <option value="9h">Entre 15h-17h</option>
+                    <option value="9h">Entre 17h-19h</option>
+                </select>
+            </div>
+            <input name="submit" type="submit" class="submit" value="→" id="confirm-call" />
+        </form>
+    </div>
 {% endblock %}
+
