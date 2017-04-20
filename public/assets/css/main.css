@@ -52,12 +52,42 @@
 	background-image: url(../img/banner.png);
 	padding-bottom: 240px;
 	padding-top: 180px;
-font-family: 'Raleway', sans-serif;
-color: #FFF;
+	color: #FFF;
 }
 .banner h1{
-	font-size: 30px;
+	font-family: 'Raleway' extrabold;
+	font-size: 35px;
 }
 .banner p{
 	font-size: 20px;
+}
+
+.first-number
+{
+	margin-right: -162px;
+}
+.first-number h1
+{
+	color : red;
+}
+
+.first-number p
+{
+	color : #082167;
+	font-weight: bold;
+}
+
+.second-number
+{
+	margin-right: -162px;
+}
+.second-number h1
+{
+	color : red;
+}
+
+.second-number p
+{
+	color : #082167;
+	font-weight: bold;
 }
