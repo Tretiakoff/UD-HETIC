@@ -1015,3 +1015,22 @@ hr{
 		left: 0;
 		-webkit-transform: translate3d(-16.7%, 0, 0);
 		transform: translate3d(-16.7%, 0, 0); } }
+
+footer{
+	border-top: 3px solid  #f9d849;
+}
+footer h1{
+	font-weight: bolder;
+	font-size: 20px;
+	color: #3055a0;
+}
+footer p{
+	font-size: 15px;
+	font-style: italic;
+}
+footer p.legal{
+	font-style: initial;
+}
+footer .phone p{
+	padding-top: 50px;
+}
