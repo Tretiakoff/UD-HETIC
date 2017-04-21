@@ -16,16 +16,13 @@ class DataController extends Controller {
     public function postContact(RequestInterface $request, ResponseInterface $response) {
 
         $lastName = $request->getParam('lastName');
-        $firstName = $request->getParam('firstName');
         $email = $request->getParam('email');
         $message = $request->getParam('message');
 
         $model = new Database($this->container->pdo);
-        $model->setContact($lastName, $firstName, $email, $message);
+        $model->setContact($lastName, $lastName, $email, $message);
 
-        return ([
-            'data' => 'success'
-        ]);
+        return $response->withJson (200);
     }
 
     public function getCall(RequestInterface $request, ResponseInterface $response) {
@@ -41,8 +38,6 @@ class DataController extends Controller {
         $model = new Database($this->container->pdo);
         $model->setCall($interval, $number);
 
-        return ([
-            'data' => 'success'
-        ]);
+        return $response->withJson (200);
     }
 }

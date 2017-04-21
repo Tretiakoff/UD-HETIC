@@ -33,17 +33,6 @@ $(".introMessage").click(function() {
     $(".reponseTel").addClass("hide");
 });
 
-$(".submitMessage").click(function() {
-    $(".messageForm").addClass("hide");
-    $(".reponseMessage").removeClass("hide");
-});
-
-$(".submitTel").click(function() {
-    $(".telephoneForm").addClass("hide");
-    $(".reponseTel").removeClass("hide");
-});
-
-
 $(".close").click(function() {
 
     $(".moyen").addClass("hide");

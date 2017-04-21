@@ -1,10 +1,26 @@
 {% block content %}
-    <form action="{{ path_for('contact') }}" method="post">
-        <input type="text" placeholder="Nom" id="lastName" name="lastName">
-        <input type="text" placeholder="Prénom" id="firstName" name="firstName">
-        <input type="email" placeholder="Email" id="email" name="email">
-        <label for="message">Votre Message</label>
-        <textarea name="message" id="message" cols="30" rows="10"></textarea>
-        <input type="submit" value="Envoyer">
+    <form action="{{ path_for('contact') }}" method="post" class="messageForm hide" id="contact-form">
+        <div class="divNom">
+            <label for="nom">Nom Prénom</label>
+            <input type="text" class="nom" name="lastName" placeholder="Nom et Prénom"/>
+        </div>
+
+        <div class="divEmail">
+            <label for="email">Email</label>
+            <input type="text" class="email" name="email" placeholder="adresse@domaine.com" id="email"/>
+        </div>
+
+        <div class="divMessage">
+            <label for="message">Votre message</label>
+            <textarea name="message" class="message" id="message"></textarea>
+        </div>
+        <input name="submit" type="submit" class="submit submitMessage" value="ENVOYER" />
     </form>
+
+    <div class="reponseMessage hide">
+        <p>Nous avons bien reçu votre demande de contact. Nous y répondrons dans les plus brefs délais. Merci</p>
+        <div class="closeMessage close2 close">
+            <button>Fermer</button>
+        </div>
+    </div>
 {% endblock %}

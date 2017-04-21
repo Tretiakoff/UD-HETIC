@@ -1,7 +1,19 @@
 {% block content %}
-    <form action="{{ path_for('call') }}" method="post">
-        <input type="text" placeholder="interval" id="interval" name="interval">
-        <input type="text" placeholder="number" id="number" name="number">
-        <input type="submit" value="Envoyer">
+<form action="{{ path_for('call') }}" method="post" class="telephoneForm hide" id="call-form">
+        <div class="divNumTel">
+            <label for="telephone">Téléphone</label>
+            <input type="tel" class="telephone" name="number" placeholder="Numéro de téléphone" id="number"/>
+        </div>
+        <div class="divHoraire">
+            <label for="plageHoraire">Plage horaire</label>
+            <select class="plageHoraire" name="interval" id="interval">
+                <option value="9h-11h">Entre 9h-11h</option>
+                <option value="11hh/13h">Entre 11h-13h</option>
+                <option value="13h/15h">Entre 13h-15h</option>
+                <option value="15h/17h">Entre 15h-17h</option>
+                <option value="17h/19h">Entre 17h-19h</option>
+            </select>
+        </div>
+        <input name="submit" type="submit" class="submit submitTel" value="→" />
     </form>
 {% endblock %}
