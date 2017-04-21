@@ -21,72 +21,89 @@
         {{ include('/section/partners.html.twig') }}
     </div>
 
-    <div class="stickyGlobal bgPetit">
-        <div class="moyen hide">
-            <div class="telGlobal">
-                <div class="introTel">
-                    <h2 class="flecheTel arrow_carrot-right">Vous souhaitez être rappelé </h2>
-                    <p>Laissez nous votre numéro et un horaire <p>
-                </div>
+<div class="stickyGlobal bgPetit">
+  <div class="moyen hide">
+    <div class="telGlobal">
+      <div class="introTel">
+        <h2 class="flecheTel arrow_carrot-right">Vous souhaitez être rappelé </h2> 
+        <p>Laissez nous votre numéro et un horaire <p>
+      </div>
 
-                <form class="telephoneForm hide"
-                      name="telephoneForm">
-                    <div class="divNumTel">
-                        <label for="telephone">Téléphone</label>
-                        <input type="tel" class="telephone" name="telephone" placeholder="Numéro de téléphone"/>
-                    </div>
-
-                    <div class="divHoraire">
-                        <label for="plageHoraire">Plage horaire</label>
-                        <select class="plageHoraire">
-                            <option value="9h">Entre 9h-11h</option>
-                            <option value="9h">Entre 11h-13h</option>
-                            <option value="9h">Entre 13h-15h</option>
-                            <option value="9h">Entre 15h-17h</option>
-                            <option value="9h">Entre 17h-19h</option>
-                        </select>
-                    </div>
-
-                    <input name="submit" type="submit" class="submit" value="→" />
-
-                </form>
-            </div>
-
-            <hr>
-
-            <div class="messageGlobal">
-                <div class="introMessage">
-                    <h2 class="flecheMessage arrow_carrot-right">Vous souhaitez nous laisser un message ?</h2>
-                </div>
-
-                <form class="messageForm hide">
-
-                    <div class="divNom">
-                        <label for="nom">Nom Prénom</label>
-                        <input type="text" class="nom" name="nom" placeholder="Nom et Prénom"/>
-                    </div>
-
-                    <div class="divEmail">
-                        <label for="email">Email</label>
-                        <input type="text" class="email" name="email" placeholder="adresse@domaine.com"/>
-                    </div>
-
-                    <div class="divMessage">
-                        <label for="message">Votre message</label>
-                        <textarea name="message" class="message"></textarea>
-                    </div>
-                    <input name="submit" type="submit" class="submit" value="ENVOYER" />
-                </form>
-            </div>
+      <form class="telephoneForm hide" 
+      name="telephoneForm">
+        <div class="divNumTel">
+          <label for="telephone">Téléphone</label>
+          <input type="tel" class="telephone" name="telephone" placeholder="Numéro de téléphone"/> 
         </div>
 
-        <div class="information">
-            <p>Besoin d'information ?</p>
+        <div class="divHoraire">
+          <label for="plageHoraire">Plage horaire</label>
+          <select class="plageHoraire">
+            <option value="9h">Entre 9h-11h</option>
+            <option value="9h">Entre 11h-13h</option>
+            <option value="9h">Entre 13h-15h</option>
+            <option value="9h">Entre 15h-17h</option>
+            <option value="9h">Entre 17h-19h</option>
+          </select>
         </div>
-        <div class="close hide">
-            <p>Fermer x </p>
+          
+        <input name="submit" type="submit" class="submit submitTel" value="→" />
+      </form>
+
+      <div class="reponseTel hide">
+        <p>Nous avons bien reçu votre demande de contact. Nous y répondrons dans les plus brefs délais. Merci</p>
+        <div class="closeTel close2">
+          <button>Fermer</button>
         </div>
+      </div>
+
     </div>
+
+    <hr>
+
+    <div class="messageGlobal">
+      <div class="introMessage">
+        <h2 class="flecheMessage arrow_carrot-right">Vous souhaitez nous laisser un message ?</h2> 
+      </div>
+
+      <form class="messageForm hide" >
+        
+        <div class="divNom">
+          <label for="nom">Nom Prénom</label>
+          <input type="text" class="nom" name="nom" placeholder="Nom et Prénom"/> 
+        </div>
+        
+        <div class="divEmail">
+          <label for="email">Email</label>
+          <input type="text" class="email" name="email" placeholder="adresse@domaine.com"/>
+        </div>
+        
+        <div class="divMessage">
+          <label for="message">Votre message</label>
+          <textarea name="message" class="message"></textarea> 
+        </div>
+        <input name="submit" type="submit" class="submit submitMessage" value="ENVOYER" />
+      </form>
+
+      <div class="reponseMessage hide">
+        <p>Nous avons bien reçu votre demande de contact. Nous y répondrons dans les plus brefs délais. Merci</p>
+        <div class="closeMessage close2">
+          <button>Fermer</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="information">
+    <p>Besoin d'information ?</p>
+  </div>
+  <div class="close2 closeGlobal hide">
+    <p>Fermer x </p>
+  </div>
+
+</div>
+
 {% endblock %}
 
 

@@ -1,3 +1,7 @@
+$('form').submit(function(e) {
+    e.preventDefault();
+});
+
 $(".information").click(function() {
     $(".moyen").removeClass("hide");
     $(".stickyGlobal").addClass("bgMoyen");
@@ -8,12 +12,13 @@ $(".information").click(function() {
 $(".introTel").click(function() {
     $(".telephoneForm").toggleClass("hide");
     $(".messageForm").addClass("hide");
+    $(".stickyGlobal").removeClass("bgGrand");
+    $(".moyen").removeClass("grand");
     $(".flecheMessage").removeClass("arrow_carrot-down");
     $(".flecheMessage").addClass("arrow_carrot-right");
     $(".flecheTel").toggleClass("arrow_carrot-down");
     $(".flecheTel").toggleClass("arrow_carrot-right");
-    $(".stickyGlobal").removeClass("bgGrand");
-    $(".moyen").removeClass("grand");
+     $(".reponseMessage").addClass("hide");
 });
 
 $(".introMessage").click(function() {
@@ -25,10 +30,25 @@ $(".introMessage").click(function() {
     $(".flecheTel").addClass("arrow_carrot-right");
     $(".flecheMessage").toggleClass("arrow_carrot-down");
     $(".flecheMessage").toggleClass("arrow_carrot-right");
+    $(".reponseTel").addClass("hide");
 });
 
-$(".close").click(function() {
+$(".submitMessage").click(function() {
+    $(".messageForm").addClass("hide");
+    $(".reponseMessage").removeClass("hide");
+});
+
+$(".submitTel").click(function() {
+    $(".telephoneForm").addClass("hide");
+    $(".reponseTel").removeClass("hide");
+});
+
+
+$(".close2").click(function() {
+
     $(".moyen").addClass("hide");
+    $(".reponseMessage").addClass("hide");
+    $(".reponseTel").addClass("hide");
     $(".flecheTel").removeClass("arrow_carrot-down");
     $(".flecheTel").addClass("arrow_carrot-right");
     $(".stickyGlobal").removeClass("bgMoyen");
