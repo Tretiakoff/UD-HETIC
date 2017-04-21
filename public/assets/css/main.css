@@ -417,6 +417,8 @@ body {
 
 .banner h1 {
 	font-size: 30px;
+	font-weight: 900 !important;
+	font-style: italic;
 
 }
 
@@ -784,6 +786,7 @@ body {
 	right: 0px;
 }
 
+
 .bgPetit{
 	background: url(../img/FondJaunePetit.svg) no-repeat;
 	background-position: bottom right;
@@ -801,22 +804,45 @@ body {
 
 .moyen{
 	padding: 375px 110px 0px 250px;
-
+	/*width: 475px;*/
 }
 .grand{
 	padding: 275px 110px 0px 180px;
 
 }
 
-.information, .close{
+.information, .closeGlobal{
 	position: absolute;
 	bottom: 20px;
 	right: 20px;
-	font-size: 14px !important;
-	font-weight: 800 !important;
+	font-size: 14px;
+	font-weight: 800;
 	margin: 0;
-
 }
+
+.closeMessage>button{
+	margin: 10px 0px;
+	height: 40px;
+	padding: 10px;
+	border-radius: 5px;
+	outline: none;
+	border-width: 0px;
+	box-sizing: border-box;
+	color: #fff;
+	background-color: #1e4698
+}
+.closeTel>button{
+	margin: 10px 0px;
+	height: 40px;
+	padding: 10px;
+	border-radius: 5px;
+	outline: none;
+	border-width: 0px;
+	box-sizing: border-box;
+	color: #fff;
+	background-color: #1e4698
+}
+
 .divNumTel, .divHoraire, .submit, .divNom, .divEmail{
 	display: inline-block;
 }
@@ -829,8 +855,8 @@ label, input{
 	display: block;
 }
 .flecheMessage, .flecheTel{
-	font-size: 20px;
-	font-weight: 800;
+	font-size: 20px !important;
+	font-weight: 800 !important;
 	margin: 0;
 }
 p{
@@ -873,6 +899,7 @@ hr{
 .hide{
 	display: none;
 }
+
 
 
 

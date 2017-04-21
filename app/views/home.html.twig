@@ -47,9 +47,16 @@
                         </select>
                     </div>
 
-                    <input name="submit" type="submit" class="submit" value="→" />
-
+                    <input name="submit" type="submit" class="submit submitTel" value="→" />
                 </form>
+
+                <div class="reponseTel hide">
+                    <p>Nous avons bien reçu votre demande de contact. Nous y répondrons dans les plus brefs délais. Merci</p>
+                    <div class="closeTel close2">
+                        <button>Fermer</button>
+                    </div>
+                </div>
+
             </div>
 
             <hr>
@@ -59,7 +66,7 @@
                     <h2 class="flecheMessage arrow_carrot-right">Vous souhaitez nous laisser un message ?</h2>
                 </div>
 
-                <form class="messageForm hide">
+                <form class="messageForm hide" >
 
                     <div class="divNom">
                         <label for="nom">Nom Prénom</label>
@@ -75,17 +82,26 @@
                         <label for="message">Votre message</label>
                         <textarea name="message" class="message"></textarea>
                     </div>
-                    <input name="submit" type="submit" class="submit" value="ENVOYER" />
+                    <input name="submit" type="submit" class="submit submitMessage" value="ENVOYER" />
                 </form>
+
+                <div class="reponseMessage hide">
+                    <p>Nous avons bien reçu votre demande de contact. Nous y répondrons dans les plus brefs délais. Merci</p>
+                    <div class="closeMessage close2">
+                        <button>Fermer</button>
+                    </div>
+                </div>
+
             </div>
         </div>
 
         <div class="information">
             <p>Besoin d'information ?</p>
         </div>
-        <div class="close hide">
+        <div class="close2 closeGlobal hide">
             <p>Fermer x </p>
         </div>
+
     </div>
 {% endblock %}
 
