@@ -1,5 +1,48 @@
 {% block content %}
 
-<h2>ICI SECONDE SECTION DE NOMBRES</h2>
+    <section class="second-number">
+        <div class="container">
+            <div class="col-md-offset-6 col-md-3">
+                <h1 id="h11"></h1>
+                <p>Lorem ipsum doler</p>
+            </div>
+            <div class="col-md-3">
+                <h1 id="h22"></h1>
+                <p>Salariés</p>
+            </div>
+        </div>
 
+    </section>
+    <script type="text/javascript">
+
+        var debut_lorem = 0;
+        var end_lorem = 317;
+        
+        var debut_salarie = 0;
+        var end_salarie = 6;
+
+
+        var m = setInterval(function(){
+            // do your thing
+
+            debut_lorem++;
+            document.getElementById('h11').innerText = debut_lorem;
+
+            if(debut_lorem === end_lorem) {
+                clearInterval(m);
+            }
+        }, 0);
+
+        var l = setInterval(function(){
+            // do your thing
+
+            debut_salarie++;
+            document.getElementById('h22').innerText = debut_salarie;
+
+            if(debut_salarie === end_salarie) {
+                clearInterval(l);
+            }
+        }, 0);
+
+    </script>
 {% endblock %}

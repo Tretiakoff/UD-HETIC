@@ -1,5 +1,50 @@
 {% block content %}
 
-    <h2>ICI FIRST SECTION DE NOMBRES</h2>
+    <section class="first-number">
+        <div class="container">
+            <div class="col-md-ofset-3 col-md-3">
+                <h1 id="h1"></h1>
+                <p>Date de creation</p>
+            </div>
+            <div class="col-md-3">
+                <h1 id="h2"></h1>
+                <p>Chantiers réalisés</p>
+            </div>
+        </div>
 
+    </section>
+
+    <script type="text/javascript">
+
+
+        var debut_year = 0;
+        var end_year = 2012;
+
+        var debut_chantier = 0;
+        var end_chantier = 149;
+
+
+        var k = setInterval(function(){
+            // do your thing
+
+            debut_year++;
+            document.getElementById('h1').innerText = debut_year;
+
+            if(debut_year === end_year) {
+                clearInterval(k);
+            }
+        }, 0);
+
+        var i = setInterval(function(){
+            // do your thing
+
+            debut_chantier++;
+            document.getElementById('h2').innerText = debut_chantier;
+
+            if(debut_chantier === end_chantier) {
+                clearInterval(i);
+            }
+        }, 0);
+
+    </script>
 {% endblock %}
